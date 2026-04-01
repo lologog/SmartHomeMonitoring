@@ -75,5 +75,42 @@
         "x": 700,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "6c4ac263502e227b",
+        "type": "mqtt in",
+        "z": "d7fe051a36785b80",
+        "name": "",
+        "topic": "home/office/light",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "c202241ab97c0f2b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 620,
+        "wires": [
+            [
+                "28e2da3463388935"
+            ]
+        ]
+    },
+    {
+        "id": "28e2da3463388935",
+        "type": "debug",
+        "z": "d7fe051a36785b80",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 620,
+        "wires": []
     }
 ]

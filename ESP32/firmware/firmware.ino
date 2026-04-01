@@ -1,12 +1,17 @@
 #include "secrets.h"
 #include <WiFi.h>
 #include <PubSubClient.h>
+#include <Wire.h>
+#include <BH1750.h>
 
 // Topics
 const char* mqttTestTopic = "home/office/test";
+const char* mqttOfficeLightTopic = "home/office/light";
 
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
+
+BH1750 lightMeter;
 
 void connectWiFi()
 {
@@ -71,6 +76,9 @@ void setup()
     Serial.begin(115200);
     delay(5000);
 
+    Wire.begin(21, 22);
+    lightMeter.begin();
+
     connectWiFi();
 
     client.setServer(MQTT_SERVER, MQTT_PORT);
@@ -92,11 +100,26 @@ void loop()
     // Required for keep-alive mechanism
     client.loop();
 
+    // Periodic measurements
+    float lux = lightMeter.readLightLevel();
+
+    // Send data to the broker
     if (client.connected())
     {
+        // "home/office/test"
         Serial.print("Publishing a message on topic: ");
         Serial.println(mqttTestTopic);
         client.publish(mqttTestTopic, "Hello");
+
+        // "home/office/light"
+        char lightString[16];
+        dtostrf(lux, 1, 2, lightString);
+        Serial.print("Publishing a message on topic: ");
+        Serial.print(mqttOfficeLightTopic);
+        Serial.print(" - Value: ");
+        Serial.print(lightString);
+        Serial.println(" lx");
+        client.publish(mqttOfficeLightTopic, lightString);
     }
 
     delay(1000);
