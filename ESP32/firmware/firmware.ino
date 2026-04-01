@@ -100,11 +100,8 @@ void loop()
     // Required for keep-alive mechanism
     client.loop();
 
-    // Measure light intensity
+    // Periodic measurements
     float lux = lightMeter.readLightLevel();
-    Serial.print("Light: ");
-    Serial.print(lux);
-    Serial.println(" lx");
 
     // Send data to the broker
     if (client.connected())
@@ -118,7 +115,10 @@ void loop()
         char lightString[16];
         dtostrf(lux, 1, 2, lightString);
         Serial.print("Publishing a message on topic: ");
-        Serial.println(mqttOfficeLightTopic);
+        Serial.print(mqttOfficeLightTopic);
+        Serial.print(" - Value: ");
+        Serial.print(lightString);
+        Serial.println(" lx");
         client.publish(mqttOfficeLightTopic, lightString);
     }
 
