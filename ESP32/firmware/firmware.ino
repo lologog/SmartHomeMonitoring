@@ -76,7 +76,7 @@ void setup()
     Serial.begin(115200);
     delay(5000);
 
-    Wire.begin();
+    Wire.begin(21, 22);
     lightMeter.begin();
 
     connectWiFi();
