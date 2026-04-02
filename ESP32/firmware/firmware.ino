@@ -146,10 +146,16 @@ void loop()
                 "  \"altitude\": %.2f\n"
                 "}",
                 lux, temperature, humidity, pressure, altitude);
-        client.publish(mqttOfficeMeasurementsTopic, payload);
-        Serial.print("Publishing on topic: ");
-        Serial.println(mqttOfficeMeasurementsTopic);
-        Serial.println(payload);
+        if (client.publish(mqttOfficeMeasurementsTopic, payload))
+        {
+            Serial.print("Publishing on topic: ");
+            Serial.println(mqttOfficeMeasurementsTopic);
+            Serial.println(payload);
+        }
+        else
+        {
+            Serial.println("Publish failed");
+        }
     }
 
     delay(1000);
