@@ -11,11 +11,24 @@
 const char* mqttTestTopic = "home/office/test";
 const char* mqttOfficeMeasurementsTopic = "home/office/measurements";
 
+// Pin definitions
+#define I2C_SDA_PIN 21
+#define I2C_SCL_PIN 22
+
+#define SPI_SCK_PIN 18
+#define SPI_MISO_PIN 19
+#define SPI_MOSI_PIN 23
+#define BME_CS_PIN 5
+
+// Sensor / payload config
+#define SEA_LEVEL_PRESSURE_HPA 1015.0
+#define JSON_PAYLOAD_SIZE 256
+
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
 BH1750 lightMeter;
-Adafruit_BME280 bme(5);
+Adafruit_BME280 bme(BME_CS_PIN);
 
 void connectWiFi()
 {
@@ -29,7 +42,7 @@ void connectWiFi()
         WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
         unsigned long start = millis();
-        while(WiFi.status() != WL_CONNECTED && millis() - start < 10000)
+        while (WiFi.status() != WL_CONNECTED && millis() - start < 10000)
         {
             delay(1000);
             Serial.print(".");
@@ -81,7 +94,7 @@ void setup()
     delay(5000);
 
     // BH1750 - I2C
-    Wire.begin(21, 22);
+    Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
     if (!lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE))
     {
         Serial.println("ERROR: BH1750 not detected");
@@ -93,7 +106,7 @@ void setup()
     Serial.println("BH1750 detected");
 
     // BME280 - SPI
-    SPI.begin(18, 19, 23, 5);
+    SPI.begin(SPI_SCK_PIN, SPI_MISO_PIN, SPI_MOSI_PIN, BME_CS_PIN);
     if (!bme.begin())
     {
         Serial.println("ERROR: BME280 not detected");
@@ -131,13 +144,12 @@ void loop()
     float temperature = bme.readTemperature();
     float humidity = bme.readHumidity();
     float pressure = bme.readPressure() / 100.0F;
-    float altitude = bme.readAltitude(1015.0);
+    float altitude = bme.readAltitude(SEA_LEVEL_PRESSURE_HPA);
 
     // Send data to the broker
     if (client.connected())
     {
-        // "home/office/measurements"
-        char payload[256];
+        char payload[JSON_PAYLOAD_SIZE];
         snprintf(payload, sizeof(payload),
                 "{\n"
                 "  \"light\": %.2f,\n"
@@ -147,6 +159,7 @@ void loop()
                 "  \"altitude\": %.2f\n"
                 "}",
                 lux, temperature, humidity, pressure, altitude);
+
         if (client.publish(mqttOfficeMeasurementsTopic, payload))
         {
             Serial.print("Publishing on topic: ");
