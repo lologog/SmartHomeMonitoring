@@ -9,6 +9,7 @@
 
 // Topics
 const char* mqttTestTopic = "home/office/test";
+const char* mqttStatusTopic = "home/office/status";
 const char* mqttOfficeMeasurementsTopic = "home/office/measurements";
 
 // Pin definitions
@@ -74,9 +75,10 @@ void connectMQTT()
         String mqttSubClientID = "mqttSubClientID-";
         mqttSubClientID += String((uint32_t)ESP.getEfuseMac(), HEX);
 
-        if (client.connect(mqttSubClientID.c_str()))
+        if (client.connect(mqttSubClientID.c_str(), mqttStatusTopic, 0, true, "offline"))
         {
             Serial.println("Connected with the broker");
+            client.publish(mqttStatusTopic, "online", true);
         }
         else
         {
