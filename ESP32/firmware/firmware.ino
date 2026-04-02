@@ -80,11 +80,29 @@ void setup()
     Serial.begin(115200);
     delay(5000);
 
+    // BH1750 - I2C
     Wire.begin(21, 22);
-    lightMeter.begin();
+    if (!lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE))
+    {
+        Serial.println("ERROR: BH1750 not detected");
+        while (1)
+        {
+            delay(100);
+        }
+    }
+    Serial.println("BH1750 detected");
 
+    // BME280 - SPI
     SPI.begin(18, 19, 23, 5);
-    bme.begin();
+    if (!bme.begin())
+    {
+        Serial.println("ERROR: BME280 not detected");
+        while (1)
+        {
+            delay(100);
+        }
+    }
+    Serial.println("BME280 detected");
 
     connectWiFi();
 
