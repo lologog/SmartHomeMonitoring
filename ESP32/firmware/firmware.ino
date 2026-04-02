@@ -8,7 +8,6 @@
 #include <Adafruit_BME280.h>
 
 // Topics
-const char* mqttTestTopic = "home/office/test";
 const char* mqttStatusTopic = "home/office/status";
 const char* mqttOfficeMeasurementsTopic = "home/office/measurements";
 
