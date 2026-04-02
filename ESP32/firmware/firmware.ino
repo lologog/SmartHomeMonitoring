@@ -3,6 +3,8 @@
 #include <PubSubClient.h>
 #include <Wire.h>
 #include <BH1750.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BME280.h>
 
 // Topics
 const char* mqttTestTopic = "home/office/test";
@@ -12,6 +14,7 @@ WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
 BH1750 lightMeter;
+Adafruit_BME280 bme(5);
 
 void connectWiFi()
 {
@@ -79,6 +82,9 @@ void setup()
     Wire.begin(21, 22);
     lightMeter.begin();
 
+    SPI.begin(18, 19, 23, 5);
+    bme.begin();
+
     connectWiFi();
 
     client.setServer(MQTT_SERVER, MQTT_PORT);
@@ -102,6 +108,18 @@ void loop()
 
     // Periodic measurements
     float lux = lightMeter.readLightLevel();
+    float temperature = bme.readTemperature();
+    float humidity = bme.readHumidity();
+    float pressure = bme.readPressure();
+    float altitude = bme.readAltitude(1015.0);
+    Serial.print("temperature: ");
+    Serial.println(temperature);
+    Serial.print("Humidity: ");
+    Serial.println(humidity);
+    Serial.print("Pressure: ");
+    Serial.println(pressure);
+    Serial.print("Altitude: ");
+    Serial.println(altitude);
 
     // Send data to the broker
     if (client.connected())
