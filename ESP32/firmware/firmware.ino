@@ -135,11 +135,6 @@ void loop()
     // Send data to the broker
     if (client.connected())
     {
-        // "home/office/test"
-        client.publish(mqttTestTopic, "Hello");
-        Serial.print("Publishing on topic: ");
-        Serial.println(mqttTestTopic);
-
         // "home/office/measurements"
         char payload[256];
         snprintf(payload, sizeof(payload),
