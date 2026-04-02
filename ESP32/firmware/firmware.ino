@@ -55,7 +55,7 @@ void connectMQTT()
 {
     while (!client.connected())
     {
-        Serial.print("Connecting with MQTT broker... ");
+        Serial.println("Connecting with MQTT broker... ");
 
         // MQTT broker requires client ID - the eFuse MAC should ensure unique ID
         String mqttSubClientID = "mqttSubClientID-";
@@ -104,6 +104,7 @@ void setup()
     }
     Serial.println("BME280 detected");
 
+    WiFi.mode(WIFI_STA);
     connectWiFi();
 
     client.setServer(MQTT_SERVER, MQTT_PORT);
