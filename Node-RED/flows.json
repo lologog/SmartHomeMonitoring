@@ -81,7 +81,7 @@
         "type": "mqtt in",
         "z": "d7fe051a36785b80",
         "name": "",
-        "topic": "home/office/light",
+        "topic": "home/office/measurements",
         "qos": "0",
         "datatype": "auto-detect",
         "broker": "c202241ab97c0f2b",
@@ -89,7 +89,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 440,
+        "x": 470,
         "y": 620,
         "wires": [
             [
@@ -111,154 +111,6 @@
         "statusType": "auto",
         "x": 700,
         "y": 620,
-        "wires": []
-    },
-    {
-        "id": "418af1defc8c7d37",
-        "type": "mqtt in",
-        "z": "d7fe051a36785b80",
-        "name": "",
-        "topic": "home/office/temperature",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "c202241ab97c0f2b",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 470,
-        "y": 700,
-        "wires": [
-            [
-                "9973baf51800847d"
-            ]
-        ]
-    },
-    {
-        "id": "9973baf51800847d",
-        "type": "debug",
-        "z": "d7fe051a36785b80",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "9f17b27072a87e64",
-        "type": "mqtt in",
-        "z": "d7fe051a36785b80",
-        "name": "",
-        "topic": "home/office/humidity",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "c202241ab97c0f2b",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 450,
-        "y": 780,
-        "wires": [
-            [
-                "e1e953cd3340c68e"
-            ]
-        ]
-    },
-    {
-        "id": "5a04503a0c1993e5",
-        "type": "mqtt in",
-        "z": "d7fe051a36785b80",
-        "name": "",
-        "topic": "home/office/pressure",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "c202241ab97c0f2b",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 450,
-        "y": 860,
-        "wires": [
-            [
-                "5353412e74dcff69"
-            ]
-        ]
-    },
-    {
-        "id": "02b6a5fbcf657192",
-        "type": "mqtt in",
-        "z": "d7fe051a36785b80",
-        "name": "",
-        "topic": "home/office/altitude",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "c202241ab97c0f2b",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 450,
-        "y": 940,
-        "wires": [
-            [
-                "b09672dd2ae74f83"
-            ]
-        ]
-    },
-    {
-        "id": "e1e953cd3340c68e",
-        "type": "debug",
-        "z": "d7fe051a36785b80",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "5353412e74dcff69",
-        "type": "debug",
-        "z": "d7fe051a36785b80",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "b09672dd2ae74f83",
-        "type": "debug",
-        "z": "d7fe051a36785b80",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 940,
         "wires": []
     }
 ]
