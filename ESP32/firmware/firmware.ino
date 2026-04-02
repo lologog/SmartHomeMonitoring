@@ -3,15 +3,22 @@
 #include <PubSubClient.h>
 #include <Wire.h>
 #include <BH1750.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BME280.h>
 
 // Topics
 const char* mqttTestTopic = "home/office/test";
 const char* mqttOfficeLightTopic = "home/office/light";
+const char* mqttOfficeTemperatureTopic = "home/office/temperature";
+const char* mqttOfficeHumidityTopic = "home/office/humidity";
+const char* mqttOfficePressureTopic = "home/office/pressure";
+const char* mqttOfficeAltitudeTopic = "home/office/altitude";
 
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
 BH1750 lightMeter;
+Adafruit_BME280 bme(5);
 
 void connectWiFi()
 {
@@ -79,6 +86,9 @@ void setup()
     Wire.begin(21, 22);
     lightMeter.begin();
 
+    SPI.begin(18, 19, 23, 5);
+    bme.begin();
+
     connectWiFi();
 
     client.setServer(MQTT_SERVER, MQTT_PORT);
@@ -102,6 +112,10 @@ void loop()
 
     // Periodic measurements
     float lux = lightMeter.readLightLevel();
+    float temperature = bme.readTemperature();
+    float humidity = bme.readHumidity();
+    float pressure = bme.readPressure() / 100.0F;
+    float altitude = bme.readAltitude(1015.0);
 
     // Send data to the broker
     if (client.connected())
@@ -120,6 +134,46 @@ void loop()
         Serial.print(lightString);
         Serial.println(" lx");
         client.publish(mqttOfficeLightTopic, lightString);
+
+        // "home/office/temperature"
+        char temperatureString[16];
+        dtostrf(temperature, 1, 2, temperatureString);
+        Serial.print("Publishing a message on topic: ");
+        Serial.print(mqttOfficeTemperatureTopic);
+        Serial.print(" - Value: ");
+        Serial.print(temperature);
+        Serial.println(" C");
+        client.publish(mqttOfficeTemperatureTopic, temperatureString);
+
+        // "home/office/humidity"
+        char humidityString[16];
+        dtostrf(humidity, 1, 2, humidityString);
+        Serial.print("Publishing a message on topic: ");
+        Serial.print(mqttOfficeHumidityTopic);
+        Serial.print(" - Value: ");
+        Serial.print(humidityString);
+        Serial.println(" %");
+        client.publish(mqttOfficeHumidityTopic, humidityString);
+
+        // "home/office/pressure"
+        char pressureString[16];
+        dtostrf(pressure, 1, 2, pressureString);
+        Serial.print("Publishing a message on topic: ");
+        Serial.print(mqttOfficePressureTopic);
+        Serial.print(" - Value: ");
+        Serial.print(pressureString);
+        Serial.println(" hPa");
+        client.publish(mqttOfficePressureTopic, pressureString);
+
+        // "home/office/altitude"
+        char altitudeString[16];
+        dtostrf(altitude, 1, 2, altitudeString);
+        Serial.print("Publishing a message on topic: ");
+        Serial.print(mqttOfficeAltitudeTopic);
+        Serial.print(" - Value: ");
+        Serial.print(altitudeString);
+        Serial.println(" m");
+        client.publish(mqttOfficeAltitudeTopic, altitudeString);
     }
 
     delay(1000);
