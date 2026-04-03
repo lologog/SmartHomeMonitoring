@@ -8,10 +8,10 @@
         "env": []
     },
     {
-        "id": "c202241ab97c0f2b",
+        "id": "d4c545d8b040dc5a",
         "type": "mqtt-broker",
-        "name": "",
-        "broker": "localhost",
+        "name": "MQTT Broker",
+        "broker": "192.168.1.25",
         "port": 1883,
         "clientid": "",
         "autoConnect": true,
@@ -39,6 +39,95 @@
         "sessionExpiry": ""
     },
     {
+        "id": "da7e48168e8b7bb0",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "a2e10d17d233ac89",
+        "type": "ui-base",
+        "name": "Charts",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "2448d207ff5f35e9",
+        "type": "ui-page",
+        "name": "Office",
+        "ui": "a2e10d17d233ac89",
+        "path": "/Office",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "da7e48168e8b7bb0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "11e5bd4226c99bf4",
+        "type": "ui-group",
+        "name": "Temperature",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "a33ec904cab77df0",
         "type": "mqtt in",
         "z": "d7fe051a36785b80",
@@ -46,7 +135,7 @@
         "topic": "home/office/test",
         "qos": "0",
         "datatype": "auto-detect",
-        "broker": "c202241ab97c0f2b",
+        "broker": "d4c545d8b040dc5a",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -77,43 +166,6 @@
         "wires": []
     },
     {
-        "id": "6c4ac263502e227b",
-        "type": "mqtt in",
-        "z": "d7fe051a36785b80",
-        "name": "",
-        "topic": "home/office/measurements",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "c202241ab97c0f2b",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 470,
-        "y": 620,
-        "wires": [
-            [
-                "28e2da3463388935"
-            ]
-        ]
-    },
-    {
-        "id": "28e2da3463388935",
-        "type": "debug",
-        "z": "d7fe051a36785b80",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "ab9cd454f35646f6",
         "type": "mqtt in",
         "z": "d7fe051a36785b80",
@@ -121,13 +173,13 @@
         "topic": "home/office/status",
         "qos": "0",
         "datatype": "auto-detect",
-        "broker": "c202241ab97c0f2b",
+        "broker": "d4c545d8b040dc5a",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
         "x": 450,
-        "y": 700,
+        "y": 620,
         "wires": [
             [
                 "fc8b4ba39222785d"
@@ -147,7 +199,110 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 700,
-        "y": 700,
+        "y": 620,
         "wires": []
+    },
+    {
+        "id": "2a8b96afe2992029",
+        "type": "mqtt in",
+        "z": "d7fe051a36785b80",
+        "name": "",
+        "topic": "home/office/measurements",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d4c545d8b040dc5a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 700,
+        "wires": [
+            [
+                "a506ad1975e61c6e"
+            ]
+        ]
+    },
+    {
+        "id": "a506ad1975e61c6e",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take temperature from JSON",
+        "func": "msg.payload = msg.payload.temperature;\nmsg.topic = \"Temperature\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 700,
+        "wires": [
+            [
+                "4f2a87df281eb708"
+            ]
+        ]
+    },
+    {
+        "id": "4f2a87df281eb708",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "11e5bd4226c99bf4",
+        "name": "Temperature Chart",
+        "label": "Temperature in the last 24 hours",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "1",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1090,
+        "y": 700,
+        "wires": [
+            []
+        ]
     }
 ]
