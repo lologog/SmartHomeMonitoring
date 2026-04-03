@@ -110,13 +110,55 @@
         ],
         "order": 1,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "11e5bd4226c99bf4",
         "type": "ui-group",
         "name": "Temperature",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "e5431bae42dfc84d",
+        "type": "ui-group",
+        "name": "Humidity",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "94382d908d5bb9f9",
+        "type": "ui-group",
+        "name": "Light intensity",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1f0af8bfc44d8252",
+        "type": "ui-group",
+        "name": "Pressure",
         "page": "2448d207ff5f35e9",
         "width": 6,
         "height": 1,
@@ -219,7 +261,10 @@
         "y": 700,
         "wires": [
             [
-                "a506ad1975e61c6e"
+                "a506ad1975e61c6e",
+                "aa10c9d61991bea6",
+                "d1c2d40d7e6cb384",
+                "b9157a7a1dcc1550"
             ]
         ]
     },
@@ -235,8 +280,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 700,
+        "x": 960,
+        "y": 760,
         "wires": [
             [
                 "4f2a87df281eb708"
@@ -299,8 +344,254 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1090,
+        "x": 1270,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa10c9d61991bea6",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take humidity from JSON",
+        "func": "msg.payload = msg.payload.humidity;\nmsg.topic = \"Humidity\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 820,
+        "wires": [
+            [
+                "9b7a2a92ca03ed82"
+            ]
+        ]
+    },
+    {
+        "id": "9b7a2a92ca03ed82",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "e5431bae42dfc84d",
+        "name": "Humidity Chart",
+        "label": "Humidity in the last 24 hours",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "1",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1260,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1c2d40d7e6cb384",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take light intensity from JSON",
+        "func": "msg.payload = msg.payload.light;\nmsg.topic = \"Light\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
         "y": 700,
+        "wires": [
+            [
+                "d66fbf52f6588ded"
+            ]
+        ]
+    },
+    {
+        "id": "d66fbf52f6588ded",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "94382d908d5bb9f9",
+        "name": "Light intensity Chart",
+        "label": "Light intensity in the last 24 hours",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "1",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1280,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9157a7a1dcc1550",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take pressure from JSON",
+        "func": "msg.payload = msg.payload.pressure;\nmsg.topic = \"Pressure\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 880,
+        "wires": [
+            [
+                "8937033d62df2a60"
+            ]
+        ]
+    },
+    {
+        "id": "8937033d62df2a60",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "1f0af8bfc44d8252",
+        "name": "Pressure Chart",
+        "label": "Pressure in the last 24 hours",
+        "order": 2,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "1",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1260,
+        "y": 880,
         "wires": [
             []
         ]
