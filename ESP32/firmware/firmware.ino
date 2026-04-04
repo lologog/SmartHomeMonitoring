@@ -76,6 +76,13 @@ void connectWiFi()
 
 void connectMQTT()
 {
+    // Prevent using uninitialized MQTT topic pointers
+    if (mqttStatusTopic == nullptr || mqttMeasurementsTopic == nullptr)
+    {
+        Serial.println("Error - MQTT topics not initialized");
+        return;
+    }
+
     while (!client.connected())
     {
         Serial.println("Connecting with MQTT broker... ");
