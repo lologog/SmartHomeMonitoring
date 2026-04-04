@@ -138,8 +138,8 @@ void setup()
     WiFi.mode(WIFI_STA);
     connectWiFi();
 
-    mqttStatusTopic = mqttBathroomStatusTopic;
-    mqttMeasurementsTopic = mqttBathroomMeasurementsTopic;
+    mqttStatusTopic = mqttKitchenStatusTopic;
+    mqttMeasurementsTopic = mqttKitchenMeasurementsTopic;
     client.setServer(MQTT_SERVER, MQTT_PORT);
     connectMQTT();
 }
