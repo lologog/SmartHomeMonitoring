@@ -80,9 +80,9 @@
     {
         "id": "2448d207ff5f35e9",
         "type": "ui-page",
-        "name": "Office",
+        "name": "Home",
         "ui": "a2e10d17d233ac89",
-        "path": "/Office",
+        "path": "/home",
         "icon": "home",
         "layout": "grid",
         "theme": "da7e48168e8b7bb0",
@@ -110,17 +110,17 @@
         ],
         "order": 1,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "11e5bd4226c99bf4",
         "type": "ui-group",
         "name": "Temperature",
-        "page": "2448d207ff5f35e9",
+        "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
-        "order": 4,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -131,7 +131,7 @@
         "id": "e5431bae42dfc84d",
         "type": "ui-group",
         "name": "Humidity",
-        "page": "2448d207ff5f35e9",
+        "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
         "order": 3,
@@ -145,7 +145,7 @@
         "id": "94382d908d5bb9f9",
         "type": "ui-group",
         "name": "Light intensity",
-        "page": "2448d207ff5f35e9",
+        "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
         "order": 2,
@@ -159,15 +159,159 @@
         "id": "1f0af8bfc44d8252",
         "type": "ui-group",
         "name": "Pressure",
-        "page": "2448d207ff5f35e9",
+        "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "3a612bc41e8627b5",
+        "type": "ui-page",
+        "name": "Office",
+        "ui": "a2e10d17d233ac89",
+        "path": "/office",
+        "icon": "monitor",
+        "layout": "grid",
+        "theme": "da7e48168e8b7bb0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ba17045bd5ba0a0a",
+        "type": "ui-page",
+        "name": "Living Room",
+        "ui": "a2e10d17d233ac89",
+        "path": "/livingroom",
+        "icon": "sofa",
+        "layout": "grid",
+        "theme": "da7e48168e8b7bb0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "645f79b2f013c918",
+        "type": "ui-page",
+        "name": "Kitchen",
+        "ui": "a2e10d17d233ac89",
+        "path": "/kitchen",
+        "icon": "silverware-fork-knife",
+        "layout": "grid",
+        "theme": "da7e48168e8b7bb0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 4,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "48d4e27be424bca1",
+        "type": "ui-page",
+        "name": "Bathroom",
+        "ui": "a2e10d17d233ac89",
+        "path": "/bathroom",
+        "icon": "shower",
+        "layout": "grid",
+        "theme": "da7e48168e8b7bb0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "a33ec904cab77df0",
@@ -258,7 +402,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 470,
-        "y": 800,
+        "y": 780,
         "wires": [
             [
                 "a506ad1975e61c6e",
@@ -281,7 +425,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 760,
+        "y": 740,
         "wires": [
             [
                 "4f2a87df281eb708"
@@ -345,7 +489,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1270,
-        "y": 760,
+        "y": 740,
         "wires": [
             []
         ]
@@ -363,7 +507,7 @@
         "finalize": "",
         "libs": [],
         "x": 950,
-        "y": 820,
+        "y": 800,
         "wires": [
             [
                 "9b7a2a92ca03ed82"
@@ -427,7 +571,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1260,
-        "y": 820,
+        "y": 800,
         "wires": [
             []
         ]
@@ -445,7 +589,7 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 700,
+        "y": 680,
         "wires": [
             [
                 "d66fbf52f6588ded"
@@ -509,7 +653,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1280,
-        "y": 700,
+        "y": 680,
         "wires": [
             []
         ]
@@ -527,7 +671,7 @@
         "finalize": "",
         "libs": [],
         "x": 950,
-        "y": 880,
+        "y": 860,
         "wires": [
             [
                 "8937033d62df2a60"
@@ -541,7 +685,7 @@
         "group": "1f0af8bfc44d8252",
         "name": "Pressure Chart",
         "label": "Pressure in the last 24 hours",
-        "order": 2,
+        "order": 1,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -591,7 +735,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1260,
-        "y": 880,
+        "y": 860,
         "wires": [
             []
         ]
