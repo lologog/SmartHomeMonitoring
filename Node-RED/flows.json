@@ -347,44 +347,6 @@
         "groupType": "default"
     },
     {
-        "id": "a33ec904cab77df0",
-        "type": "mqtt in",
-        "z": "d7fe051a36785b80",
-        "name": "",
-        "topic": "home/office/test",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "d4c545d8b040dc5a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 440,
-        "y": 540,
-        "wires": [
-            [
-                "3e5d480e825a5883"
-            ]
-        ]
-    },
-    {
-        "id": "3e5d480e825a5883",
-        "type": "debug",
-        "z": "d7fe051a36785b80",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "ab9cd454f35646f6",
         "type": "mqtt in",
         "z": "d7fe051a36785b80",
@@ -435,7 +397,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 470,
-        "y": 900,
+        "y": 960,
         "wires": [
             [
                 "a506ad1975e61c6e",
@@ -458,7 +420,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 740,
+        "y": 800,
         "wires": [
             [
                 "4f2a87df281eb708",
@@ -523,7 +485,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1270,
-        "y": 740,
+        "y": 800,
         "wires": [
             []
         ]
@@ -541,7 +503,7 @@
         "finalize": "",
         "libs": [],
         "x": 950,
-        "y": 940,
+        "y": 1000,
         "wires": [
             [
                 "9b7a2a92ca03ed82",
@@ -606,7 +568,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1260,
-        "y": 940,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -624,7 +586,7 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 840,
+        "y": 900,
         "wires": [
             [
                 "d66fbf52f6588ded",
@@ -689,7 +651,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1280,
-        "y": 840,
+        "y": 900,
         "wires": [
             []
         ]
@@ -707,7 +669,7 @@
         "finalize": "",
         "libs": [],
         "x": 950,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "8937033d62df2a60",
@@ -772,7 +734,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1260,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -798,7 +760,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 1460,
-        "y": 700,
+        "y": 760,
         "wires": []
     },
     {
@@ -822,7 +784,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 1460,
-        "y": 800,
+        "y": 860,
         "wires": []
     },
     {
@@ -846,7 +808,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 1440,
-        "y": 900,
+        "y": 960,
         "wires": []
     },
     {
@@ -870,7 +832,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 1450,
-        "y": 1000,
+        "y": 1060,
         "wires": []
     },
     {
@@ -886,7 +848,7 @@
         "finalize": "",
         "libs": [],
         "x": 1240,
-        "y": 700,
+        "y": 760,
         "wires": [
             [
                 "6b41892f470e016f"
@@ -906,7 +868,7 @@
         "finalize": "",
         "libs": [],
         "x": 1230,
-        "y": 800,
+        "y": 860,
         "wires": [
             [
                 "b4f52c50c611af34"
@@ -926,7 +888,7 @@
         "finalize": "",
         "libs": [],
         "x": 1230,
-        "y": 900,
+        "y": 960,
         "wires": [
             [
                 "57becdf0723afe7e"
@@ -946,7 +908,7 @@
         "finalize": "",
         "libs": [],
         "x": 1240,
-        "y": 1000,
+        "y": 1060,
         "wires": [
             [
                 "a42375a87982cac4"
