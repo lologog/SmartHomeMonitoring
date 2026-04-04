@@ -120,7 +120,7 @@
         "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
-        "order": 1,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -134,7 +134,7 @@
         "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
-        "order": 3,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -148,7 +148,7 @@
         "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
-        "order": 2,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -162,7 +162,7 @@
         "page": "3a612bc41e8627b5",
         "width": 6,
         "height": 1,
-        "order": 4,
+        "order": 5,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -333,6 +333,20 @@
         }
     },
     {
+        "id": "3080ec9d3a9696e7",
+        "type": "ui-group",
+        "name": "At the moment",
+        "page": "3a612bc41e8627b5",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "a33ec904cab77df0",
         "type": "mqtt in",
         "z": "d7fe051a36785b80",
@@ -421,7 +435,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 470,
-        "y": 780,
+        "y": 900,
         "wires": [
             [
                 "a506ad1975e61c6e",
@@ -447,7 +461,8 @@
         "y": 740,
         "wires": [
             [
-                "4f2a87df281eb708"
+                "4f2a87df281eb708",
+                "a316cdbe48a8e21c"
             ]
         ]
     },
@@ -526,10 +541,11 @@
         "finalize": "",
         "libs": [],
         "x": 950,
-        "y": 800,
+        "y": 940,
         "wires": [
             [
-                "9b7a2a92ca03ed82"
+                "9b7a2a92ca03ed82",
+                "6726385d8ca0cf64"
             ]
         ]
     },
@@ -590,7 +606,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1260,
-        "y": 800,
+        "y": 940,
         "wires": [
             []
         ]
@@ -608,10 +624,11 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 680,
+        "y": 840,
         "wires": [
             [
-                "d66fbf52f6588ded"
+                "d66fbf52f6588ded",
+                "2fc2092e7270d685"
             ]
         ]
     },
@@ -672,7 +689,7 @@
         "className": "",
         "interpolation": "linear",
         "x": 1280,
-        "y": 680,
+        "y": 840,
         "wires": [
             []
         ]
@@ -690,10 +707,11 @@
         "finalize": "",
         "libs": [],
         "x": 950,
-        "y": 860,
+        "y": 1040,
         "wires": [
             [
-                "8937033d62df2a60"
+                "8937033d62df2a60",
+                "17ee9fa306fbe9d1"
             ]
         ]
     },
@@ -754,9 +772,185 @@
         "className": "",
         "interpolation": "linear",
         "x": 1260,
-        "y": 860,
+        "y": 1040,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "6b41892f470e016f",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "3080ec9d3a9696e7",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "Current temperature",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1460,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b4f52c50c611af34",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "3080ec9d3a9696e7",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "Current light intensity",
+        "label": "Light intensity",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1460,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "57becdf0723afe7e",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "3080ec9d3a9696e7",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "Current humidity",
+        "label": "Humidity",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1440,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "a42375a87982cac4",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "3080ec9d3a9696e7",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "Current pressure",
+        "label": "Pressure",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1450,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "a316cdbe48a8e21c",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add °C",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} °C`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 700,
+        "wires": [
+            [
+                "6b41892f470e016f"
+            ]
+        ]
+    },
+    {
+        "id": "2fc2092e7270d685",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add lx",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} lx`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 800,
+        "wires": [
+            [
+                "b4f52c50c611af34"
+            ]
+        ]
+    },
+    {
+        "id": "6726385d8ca0cf64",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add %",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} %`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 900,
+        "wires": [
+            [
+                "57becdf0723afe7e"
+            ]
+        ]
+    },
+    {
+        "id": "17ee9fa306fbe9d1",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add hPa",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} hPa`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 1000,
+        "wires": [
+            [
+                "a42375a87982cac4"
+            ]
         ]
     }
 ]
