@@ -85,7 +85,7 @@
         "path": "/home",
         "icon": "home",
         "layout": "grid",
-        "theme": "da7e48168e8b7bb0",
+        "theme": "4e817bada052b95c",
         "breakpoints": [
             {
                 "name": "Default",
@@ -110,8 +110,8 @@
         ],
         "order": 1,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "11e5bd4226c99bf4",
@@ -550,6 +550,62 @@
         "width": 6,
         "height": 1,
         "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c3ca659fb6fb1ebe",
+        "type": "ui-group",
+        "name": "Temperature in the rooms",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "aeb9a4af8d085b08",
+        "type": "ui-group",
+        "name": "Light intensity in the rooms",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "8c0acd7501338312",
+        "type": "ui-group",
+        "name": "Humidity in the rooms",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b1e369e06cd43bca",
+        "type": "ui-group",
+        "name": "Pressure in the rooms",
+        "page": "2448d207ff5f35e9",
+        "width": 6,
+        "height": 1,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -2720,5 +2776,373 @@
         "x": 1430,
         "y": 1980,
         "wires": []
+    },
+    {
+        "id": "cf4014debd2ac71d",
+        "type": "mqtt in",
+        "z": "d7fe051a36785b80",
+        "name": "",
+        "topic": "home/+/measurements",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d4c545d8b040dc5a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 2240,
+        "wires": [
+            [
+                "b29828150c328363"
+            ]
+        ]
+    },
+    {
+        "id": "b29828150c328363",
+        "type": "json",
+        "z": "d7fe051a36785b80",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 690,
+        "y": 2240,
+        "wires": [
+            [
+                "b627c2de23b0db09",
+                "e6cdd7aeb725f511",
+                "7204f34805d8a108",
+                "552a966df6829af5"
+            ]
+        ]
+    },
+    {
+        "id": "b627c2de23b0db09",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Collect temperature from all of the rooms",
+        "func": "msg.topic = msg.topic.split(\"/\")[1];\nmsg.payload = JSON.parse(msg.payload).temperature;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 2160,
+        "wires": [
+            [
+                "510159ab7630998c"
+            ]
+        ]
+    },
+    {
+        "id": "510159ab7630998c",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "c3ca659fb6fb1ebe",
+        "name": "Temperature from all of the rooms",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Temperature [°C]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": true,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1360,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6cdd7aeb725f511",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Collect light intensity from all of the rooms",
+        "func": "msg.topic = msg.topic.split(\"/\")[1];\nmsg.payload = JSON.parse(msg.payload).light;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 2220,
+        "wires": [
+            [
+                "c7c340d2a45d8131"
+            ]
+        ]
+    },
+    {
+        "id": "c7c340d2a45d8131",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "aeb9a4af8d085b08",
+        "name": "Light intensity from all of the rooms",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Light intensity [lx]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": true,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1360,
+        "y": 2220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7204f34805d8a108",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Collect humidity from all of the rooms",
+        "func": "msg.topic = msg.topic.split(\"/\")[1];\nmsg.payload = JSON.parse(msg.payload).humidity;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 2280,
+        "wires": [
+            [
+                "9269729f63a79e7e"
+            ]
+        ]
+    },
+    {
+        "id": "9269729f63a79e7e",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "8c0acd7501338312",
+        "name": "Humidity from all of the rooms",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Humidity [%]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": true,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1350,
+        "y": 2280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "552a966df6829af5",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Collect pressure from all of the rooms",
+        "func": "msg.topic = msg.topic.split(\"/\")[1];\nmsg.payload = JSON.parse(msg.payload).pressure;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 2340,
+        "wires": [
+            [
+                "cce40885e6fbdf90"
+            ]
+        ]
+    },
+    {
+        "id": "cce40885e6fbdf90",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "b1e369e06cd43bca",
+        "name": "Pressure from all of the rooms",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Pressure [hPa]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": true,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1350,
+        "y": 2340,
+        "wires": [
+            []
+        ]
     }
 ]
