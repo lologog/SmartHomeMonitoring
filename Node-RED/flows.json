@@ -258,7 +258,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 470,
-        "y": 700,
+        "y": 800,
         "wires": [
             [
                 "a506ad1975e61c6e",
@@ -318,7 +318,7 @@
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": true,
-        "removeOlder": "1",
+        "removeOlder": "24",
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
@@ -400,7 +400,7 @@
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": true,
-        "removeOlder": "1",
+        "removeOlder": "24",
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
@@ -482,7 +482,7 @@
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": true,
-        "removeOlder": "1",
+        "removeOlder": "24",
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
@@ -564,7 +564,7 @@
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": true,
-        "removeOlder": "1",
+        "removeOlder": "24",
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
