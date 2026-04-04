@@ -703,7 +703,7 @@
         "z": "d7fe051a36785b80",
         "group": "1f0af8bfc44d8252",
         "name": "Pressure Chart",
-        "label": "🌤️ Pressure in the last 24 hours",
+        "label": "Pressure in the last 24 hours",
         "order": 1,
         "chartType": "line",
         "category": "topic",
