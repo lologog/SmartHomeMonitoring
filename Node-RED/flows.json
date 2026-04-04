@@ -285,7 +285,7 @@
         "path": "/bathroom",
         "icon": "shower",
         "layout": "grid",
-        "theme": "da7e48168e8b7bb0",
+        "theme": "4e817bada052b95c",
         "breakpoints": [
             {
                 "name": "Default",
@@ -347,11 +347,81 @@
         "groupType": "default"
     },
     {
+        "id": "8a10e043106d1a89",
+        "type": "ui-group",
+        "name": "Temperature",
+        "page": "48d4e27be424bca1",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "4e19579b1ca3e20f",
+        "type": "ui-group",
+        "name": "At the moment",
+        "page": "48d4e27be424bca1",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f2c18455e92b8b94",
+        "type": "ui-group",
+        "name": "Light intensity",
+        "page": "48d4e27be424bca1",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "60dc7547173e366e",
+        "type": "ui-group",
+        "name": "Humidity",
+        "page": "48d4e27be424bca1",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b22e2e7ed8760caf",
+        "type": "ui-group",
+        "name": "Pressure",
+        "page": "48d4e27be424bca1",
+        "width": 6,
+        "height": 1,
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "ab9cd454f35646f6",
         "type": "mqtt in",
         "z": "d7fe051a36785b80",
         "name": "",
-        "topic": "home/office/status",
+        "topic": "home/+/status",
         "qos": "0",
         "datatype": "auto-detect",
         "broker": "d4c545d8b040dc5a",
@@ -359,8 +429,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 450,
-        "y": 620,
+        "x": 410,
+        "y": 100,
         "wires": [
             [
                 "fc8b4ba39222785d"
@@ -379,8 +449,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 620,
+        "x": 680,
+        "y": 100,
         "wires": []
     },
     {
@@ -396,8 +466,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 470,
-        "y": 960,
+        "x": 450,
+        "y": 440,
         "wires": [
             [
                 "a506ad1975e61c6e",
@@ -419,8 +489,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 800,
+        "x": 940,
+        "y": 280,
         "wires": [
             [
                 "4f2a87df281eb708",
@@ -484,8 +554,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1270,
-        "y": 800,
+        "x": 1250,
+        "y": 280,
         "wires": [
             []
         ]
@@ -502,8 +572,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1000,
+        "x": 930,
+        "y": 480,
         "wires": [
             [
                 "9b7a2a92ca03ed82",
@@ -567,8 +637,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1260,
-        "y": 1000,
+        "x": 1240,
+        "y": 480,
         "wires": [
             []
         ]
@@ -585,8 +655,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 900,
+        "x": 950,
+        "y": 380,
         "wires": [
             [
                 "d66fbf52f6588ded",
@@ -650,8 +720,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1280,
-        "y": 900,
+        "x": 1260,
+        "y": 380,
         "wires": [
             []
         ]
@@ -668,8 +738,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1100,
+        "x": 930,
+        "y": 580,
         "wires": [
             [
                 "8937033d62df2a60",
@@ -733,8 +803,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1260,
-        "y": 1100,
+        "x": 1240,
+        "y": 580,
         "wires": [
             []
         ]
@@ -759,8 +829,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1460,
-        "y": 760,
+        "x": 1440,
+        "y": 240,
         "wires": []
     },
     {
@@ -783,8 +853,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1460,
-        "y": 860,
+        "x": 1440,
+        "y": 340,
         "wires": []
     },
     {
@@ -807,8 +877,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 960,
+        "x": 1420,
+        "y": 440,
         "wires": []
     },
     {
@@ -831,8 +901,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1450,
-        "y": 1060,
+        "x": 1430,
+        "y": 540,
         "wires": []
     },
     {
@@ -847,8 +917,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
-        "y": 760,
+        "x": 1220,
+        "y": 240,
         "wires": [
             [
                 "6b41892f470e016f"
@@ -867,8 +937,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
-        "y": 860,
+        "x": 1210,
+        "y": 340,
         "wires": [
             [
                 "b4f52c50c611af34"
@@ -887,8 +957,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
-        "y": 960,
+        "x": 1210,
+        "y": 440,
         "wires": [
             [
                 "57becdf0723afe7e"
@@ -907,12 +977,544 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
-        "y": 1060,
+        "x": 1220,
+        "y": 540,
         "wires": [
             [
                 "a42375a87982cac4"
             ]
         ]
+    },
+    {
+        "id": "73aca8842695d90f",
+        "type": "mqtt in",
+        "z": "d7fe051a36785b80",
+        "name": "",
+        "topic": "home/bathroom/measurements",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d4c545d8b040dc5a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 960,
+        "wires": [
+            [
+                "3c1ba94e5b8c8233",
+                "c6313a0c67c210dd",
+                "5f22a0697fb324ee",
+                "d2490582ab2af62c"
+            ]
+        ]
+    },
+    {
+        "id": "3c1ba94e5b8c8233",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take temperature from JSON",
+        "func": "msg.payload = msg.payload.temperature;\nmsg.topic = \"Temperature\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 820,
+        "wires": [
+            [
+                "3827a41f651a0a78",
+                "7f8d53de2d8cef75"
+            ]
+        ]
+    },
+    {
+        "id": "3827a41f651a0a78",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "8a10e043106d1a89",
+        "name": "Temperature Chart",
+        "label": "🌡️ Temperature in the last 24 hours",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Temperature [°C]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": false,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1250,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f8d53de2d8cef75",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add °C",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} °C`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 780,
+        "wires": [
+            [
+                "5ec0ef84b684e9c7"
+            ]
+        ]
+    },
+    {
+        "id": "5ec0ef84b684e9c7",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "4e19579b1ca3e20f",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "name": "Current temperature",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1440,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "c6313a0c67c210dd",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take light intensity from JSON",
+        "func": "msg.payload = msg.payload.light;\nmsg.topic = \"Light\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 920,
+        "wires": [
+            [
+                "d419e06de8a3485e",
+                "727073d0aed9bcdc"
+            ]
+        ]
+    },
+    {
+        "id": "d419e06de8a3485e",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "f2c18455e92b8b94",
+        "name": "Light intensity Chart",
+        "label": "💡 Light intensity in the last 24 hours",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Light intensity [lx]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": false,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1260,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "727073d0aed9bcdc",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add lx",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} lx`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 880,
+        "wires": [
+            [
+                "82b1a74454afa94c"
+            ]
+        ]
+    },
+    {
+        "id": "82b1a74454afa94c",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "4e19579b1ca3e20f",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "Current light intensity",
+        "label": "Light intensity",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1440,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "5f22a0697fb324ee",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take humidity from JSON",
+        "func": "msg.payload = msg.payload.humidity;\nmsg.topic = \"Humidity\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1020,
+        "wires": [
+            [
+                "462012cc15740cf5",
+                "37324d9675634268"
+            ]
+        ]
+    },
+    {
+        "id": "462012cc15740cf5",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "60dc7547173e366e",
+        "name": "Humidity Chart",
+        "label": "💧 Humidity in the last 24 hours",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Humidity [%]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": false,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1240,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37324d9675634268",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add %",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} %`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 980,
+        "wires": [
+            [
+                "c22eecc886a32865"
+            ]
+        ]
+    },
+    {
+        "id": "c22eecc886a32865",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "4e19579b1ca3e20f",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "Current humidity",
+        "label": "Humidity",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1420,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d2490582ab2af62c",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Take pressure from JSON",
+        "func": "msg.payload = msg.payload.pressure;\nmsg.topic = \"Pressure\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 1120,
+        "wires": [
+            [
+                "8a7829823cbaa1d8",
+                "cb589d64751f2644"
+            ]
+        ]
+    },
+    {
+        "id": "8a7829823cbaa1d8",
+        "type": "ui-chart",
+        "z": "d7fe051a36785b80",
+        "group": "b22e2e7ed8760caf",
+        "name": "Pressure Chart",
+        "label": "Pressure in the last 24 hours",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time [s]",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Pressure [hPa]",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "line",
+        "pointRadius": "1",
+        "showLegend": false,
+        "removeOlder": "24",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1240,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb589d64751f2644",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Add hPa",
+        "func": "msg.payload = `${Number(msg.payload).toFixed(2)} hPa`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 1080,
+        "wires": [
+            [
+                "01a839599599ee4e"
+            ]
+        ]
+    },
+    {
+        "id": "01a839599599ee4e",
+        "type": "ui-text",
+        "z": "d7fe051a36785b80",
+        "group": "4e19579b1ca3e20f",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "Current pressure",
+        "label": "Pressure",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1430,
+        "y": 1080,
+        "wires": []
     }
 ]
