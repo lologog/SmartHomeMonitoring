@@ -87,11 +87,14 @@ void connectMQTT()
     {
         Serial.println("Connecting with MQTT broker... ");
 
-        // MQTT broker requires client ID - the eFuse MAC should ensure unique ID
-        String mqttSubClientID = "mqttSubClientID-";
-        mqttSubClientID += String((uint32_t)ESP.getEfuseMac(), HEX);
+        // A unique client ID is necessary while connecting to MQTT
+        uint64_t chipid = ESP.getEfuseMac();
+        char mqttClientID[64];
+        snprintf(mqttClientID, sizeof(mqttClientID), "esp32-%04X%08X", (uint16_t)(chipid >> 32), (uint32_t)chipid);
+        Serial.print("MQTT client ID: ");
+        Serial.println(mqttClientID);
 
-        if (client.connect(mqttSubClientID.c_str(), mqttStatusTopic, 0, true, "offline"))
+        if (client.connect(mqttClientID, mqttStatusTopic, 0, true, "offline"))
         {
             Serial.println("Connected with the broker");
             client.publish(mqttStatusTopic, "online", true);
