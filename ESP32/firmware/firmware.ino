@@ -8,8 +8,18 @@
 #include <Adafruit_BME280.h>
 
 // Topics
-const char* mqttStatusTopic = "home/office/status";
+const char* mqttStatusTopic = nullptr;
+const char* mqttMeasurementsTopic = nullptr;
+
+const char* mqttOfficeStatusTopic = "home/office/status";
+const char* mqttLivingRoomStatusTopic = "home/livingroom/status";
+const char* mqttKitchenStatusTopic = "home/kitchen/status";
+const char* mqttBathroomStatusTopic = "home/bathroom/status";
+
 const char* mqttOfficeMeasurementsTopic = "home/office/measurements";
+const char* mqttLivingRoomMeasurementsTopic = "home/livingroom/measurements";
+const char* mqttKitchenMeasurementsTopic = "home/kitchen/measurements";
+const char* mqttBathroomMeasurementsTopic = "home/bathroom/measurements";
 
 // Pin definitions
 #define I2C_SDA_PIN 21
@@ -121,6 +131,8 @@ void setup()
     WiFi.mode(WIFI_STA);
     connectWiFi();
 
+    mqttStatusTopic = mqttBathroomStatusTopic;
+    mqttMeasurementsTopic = mqttBathroomMeasurementsTopic;
     client.setServer(MQTT_SERVER, MQTT_PORT);
     connectMQTT();
 }
@@ -161,10 +173,10 @@ void loop()
                 "}",
                 lux, temperature, humidity, pressure, altitude);
 
-        if (client.publish(mqttOfficeMeasurementsTopic, payload))
+        if (client.publish(mqttMeasurementsTopic, payload))
         {
             Serial.print("Publishing on topic: ");
-            Serial.println(mqttOfficeMeasurementsTopic);
+            Serial.println(mqttMeasurementsTopic);
             Serial.println(payload);
         }
         else
