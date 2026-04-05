@@ -613,6 +613,21 @@
         "groupType": "default"
     },
     {
+        "id": "0a875f58c87acdb4",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://localhost:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
         "id": "ab9cd454f35646f6",
         "type": "mqtt in",
         "z": "d7fe051a36785b80",
@@ -625,8 +640,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 410,
-        "y": 120,
+        "x": 390,
+        "y": 80,
         "wires": [
             [
                 "fc8b4ba39222785d"
@@ -645,8 +660,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 120,
+        "x": 660,
+        "y": 80,
         "wires": []
     },
     {
@@ -3144,5 +3159,80 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "7b0ddfa76c851de5",
+        "type": "mqtt in",
+        "z": "d7fe051a36785b80",
+        "name": "",
+        "topic": "home/+/measurements",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d4c545d8b040dc5a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "beee785802a60d0b"
+            ]
+        ]
+    },
+    {
+        "id": "beee785802a60d0b",
+        "type": "json",
+        "z": "d7fe051a36785b80",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 670,
+        "y": 140,
+        "wires": [
+            [
+                "9fa2a324165836ac"
+            ]
+        ]
+    },
+    {
+        "id": "9fa2a324165836ac",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Prepare data for InfluxDB",
+        "func": "let parts = msg.topic.split(\"/\");\nlet room = parts[1];\n\nmsg.measurement = \"environment\";\n\nmsg.payload = [\n    {\n        temperature: Number(msg.payload.temperature),\n        humidity: Number(msg.payload.humidity),\n        pressure: Number(msg.payload.pressure),\n        light: Number(msg.payload.light),\n        altitude: Number(msg.payload.altitude)\n    },\n    {\n        room: room\n    }\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 140,
+        "wires": [
+            [
+                "58e9eb722dee3791"
+            ]
+        ]
+    },
+    {
+        "id": "58e9eb722dee3791",
+        "type": "influxdb out",
+        "z": "d7fe051a36785b80",
+        "influxdb": "0a875f58c87acdb4",
+        "name": "Write to InfuxDB",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "smartHome",
+        "bucket": "homeData",
+        "x": 1160,
+        "y": 140,
+        "wires": []
     }
 ]
