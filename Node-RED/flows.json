@@ -640,11 +640,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 390,
-        "y": 80,
+        "x": 370,
+        "y": 180,
         "wires": [
             [
-                "fc8b4ba39222785d"
+                "fc8b4ba39222785d",
+                "d5ecccbd4edb2976"
             ]
         ]
     },
@@ -661,7 +662,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 660,
-        "y": 80,
+        "y": 140,
         "wires": []
     },
     {
@@ -677,8 +678,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 450,
-        "y": 440,
+        "x": 430,
+        "y": 700,
         "wires": [
             [
                 "a506ad1975e61c6e",
@@ -700,8 +701,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 280,
+        "x": 920,
+        "y": 540,
         "wires": [
             [
                 "a316cdbe48a8e21c",
@@ -765,8 +766,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1250,
-        "y": 280,
+        "x": 1230,
+        "y": 540,
         "wires": [
             []
         ]
@@ -783,8 +784,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 480,
+        "x": 910,
+        "y": 740,
         "wires": [
             [
                 "6726385d8ca0cf64",
@@ -848,8 +849,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 480,
+        "x": 1220,
+        "y": 740,
         "wires": [
             []
         ]
@@ -866,8 +867,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 380,
+        "x": 930,
+        "y": 640,
         "wires": [
             [
                 "2fc2092e7270d685",
@@ -931,8 +932,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1260,
-        "y": 380,
+        "x": 1240,
+        "y": 640,
         "wires": [
             []
         ]
@@ -949,8 +950,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 580,
+        "x": 910,
+        "y": 840,
         "wires": [
             [
                 "17ee9fa306fbe9d1",
@@ -1014,8 +1015,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 580,
+        "x": 1220,
+        "y": 840,
         "wires": [
             []
         ]
@@ -1040,8 +1041,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 240,
+        "x": 1420,
+        "y": 500,
         "wires": []
     },
     {
@@ -1064,8 +1065,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 340,
+        "x": 1420,
+        "y": 600,
         "wires": []
     },
     {
@@ -1088,8 +1089,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1420,
-        "y": 440,
+        "x": 1400,
+        "y": 700,
         "wires": []
     },
     {
@@ -1112,8 +1113,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1430,
-        "y": 540,
+        "x": 1410,
+        "y": 800,
         "wires": []
     },
     {
@@ -1128,8 +1129,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 240,
+        "x": 1200,
+        "y": 500,
         "wires": [
             [
                 "6b41892f470e016f"
@@ -1148,8 +1149,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 340,
+        "x": 1190,
+        "y": 600,
         "wires": [
             [
                 "b4f52c50c611af34"
@@ -1168,8 +1169,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 440,
+        "x": 1190,
+        "y": 700,
         "wires": [
             [
                 "57becdf0723afe7e"
@@ -1188,8 +1189,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 540,
+        "x": 1200,
+        "y": 800,
         "wires": [
             [
                 "a42375a87982cac4"
@@ -1209,8 +1210,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 470,
-        "y": 900,
+        "x": 450,
+        "y": 1160,
         "wires": [
             [
                 "3c1ba94e5b8c8233",
@@ -1232,8 +1233,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 760,
+        "x": 920,
+        "y": 1020,
         "wires": [
             [
                 "7f8d53de2d8cef75",
@@ -1297,8 +1298,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1250,
-        "y": 760,
+        "x": 1230,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -1315,8 +1316,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 720,
+        "x": 1200,
+        "y": 980,
         "wires": [
             [
                 "5ec0ef84b684e9c7"
@@ -1343,8 +1344,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 720,
+        "x": 1420,
+        "y": 980,
         "wires": []
     },
     {
@@ -1359,8 +1360,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 860,
+        "x": 930,
+        "y": 1120,
         "wires": [
             [
                 "727073d0aed9bcdc",
@@ -1424,8 +1425,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1260,
-        "y": 860,
+        "x": 1240,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -1442,8 +1443,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 820,
+        "x": 1190,
+        "y": 1080,
         "wires": [
             [
                 "82b1a74454afa94c"
@@ -1470,8 +1471,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 820,
+        "x": 1420,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1486,8 +1487,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 960,
+        "x": 910,
+        "y": 1220,
         "wires": [
             [
                 "37324d9675634268",
@@ -1551,8 +1552,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 960,
+        "x": 1220,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -1569,8 +1570,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 920,
+        "x": 1190,
+        "y": 1180,
         "wires": [
             [
                 "c22eecc886a32865"
@@ -1597,8 +1598,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1420,
-        "y": 920,
+        "x": 1400,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1613,8 +1614,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 1060,
+        "x": 910,
+        "y": 1320,
         "wires": [
             [
                 "cb589d64751f2644",
@@ -1678,8 +1679,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 1060,
+        "x": 1220,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -1696,8 +1697,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 1020,
+        "x": 1200,
+        "y": 1280,
         "wires": [
             [
                 "01a839599599ee4e"
@@ -1724,8 +1725,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1430,
-        "y": 1020,
+        "x": 1410,
+        "y": 1280,
         "wires": []
     },
     {
@@ -1741,8 +1742,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 460,
-        "y": 1400,
+        "x": 440,
+        "y": 1660,
         "wires": [
             [
                 "6cb4a0ed8e80dbc7",
@@ -1764,8 +1765,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 1240,
+        "x": 920,
+        "y": 1500,
         "wires": [
             [
                 "41aacc6aee6caffb",
@@ -1829,8 +1830,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1250,
-        "y": 1240,
+        "x": 1230,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -1847,8 +1848,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 1200,
+        "x": 1200,
+        "y": 1460,
         "wires": [
             [
                 "1c6feedfb6037417"
@@ -1875,8 +1876,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 1200,
+        "x": 1420,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1891,8 +1892,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1340,
+        "x": 930,
+        "y": 1600,
         "wires": [
             [
                 "a473521caeeaa18b",
@@ -1956,8 +1957,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1260,
-        "y": 1340,
+        "x": 1240,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -1974,8 +1975,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 1300,
+        "x": 1190,
+        "y": 1560,
         "wires": [
             [
                 "fb64839249ddc0bd"
@@ -2002,8 +2003,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 1300,
+        "x": 1420,
+        "y": 1560,
         "wires": []
     },
     {
@@ -2018,8 +2019,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 1440,
+        "x": 910,
+        "y": 1700,
         "wires": [
             [
                 "950aa4d863b327cb",
@@ -2083,8 +2084,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 1440,
+        "x": 1220,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -2101,8 +2102,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 1400,
+        "x": 1190,
+        "y": 1660,
         "wires": [
             [
                 "a655e3fb3b577606"
@@ -2129,8 +2130,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1420,
-        "y": 1400,
+        "x": 1400,
+        "y": 1660,
         "wires": []
     },
     {
@@ -2145,8 +2146,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 1540,
+        "x": 910,
+        "y": 1800,
         "wires": [
             [
                 "c2879ccb86bf69c2",
@@ -2210,8 +2211,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 1540,
+        "x": 1220,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -2228,8 +2229,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 1500,
+        "x": 1200,
+        "y": 1760,
         "wires": [
             [
                 "a09413c943d60934"
@@ -2256,8 +2257,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1430,
-        "y": 1500,
+        "x": 1410,
+        "y": 1760,
         "wires": []
     },
     {
@@ -2273,8 +2274,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 470,
-        "y": 1860,
+        "x": 450,
+        "y": 2120,
         "wires": [
             [
                 "baea039df292622c",
@@ -2296,8 +2297,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 1720,
+        "x": 920,
+        "y": 1980,
         "wires": [
             [
                 "6a159d726eeb8cf3",
@@ -2361,8 +2362,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1250,
-        "y": 1720,
+        "x": 1230,
+        "y": 1980,
         "wires": [
             []
         ]
@@ -2379,8 +2380,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 1680,
+        "x": 1200,
+        "y": 1940,
         "wires": [
             [
                 "5a299daad0b0ae97"
@@ -2407,8 +2408,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 1680,
+        "x": 1420,
+        "y": 1940,
         "wires": []
     },
     {
@@ -2423,8 +2424,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1820,
+        "x": 930,
+        "y": 2080,
         "wires": [
             [
                 "55a94f37d63278a6",
@@ -2488,8 +2489,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1260,
-        "y": 1820,
+        "x": 1240,
+        "y": 2080,
         "wires": [
             []
         ]
@@ -2506,8 +2507,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 1780,
+        "x": 1190,
+        "y": 2040,
         "wires": [
             [
                 "b8eb7f966491205d"
@@ -2534,8 +2535,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1440,
-        "y": 1780,
+        "x": 1420,
+        "y": 2040,
         "wires": []
     },
     {
@@ -2550,8 +2551,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 1920,
+        "x": 910,
+        "y": 2180,
         "wires": [
             [
                 "0b7952cf4476179d",
@@ -2615,8 +2616,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 1920,
+        "x": 1220,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -2633,8 +2634,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 1880,
+        "x": 1190,
+        "y": 2140,
         "wires": [
             [
                 "4941aa19e23624f6"
@@ -2661,8 +2662,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1420,
-        "y": 1880,
+        "x": 1400,
+        "y": 2140,
         "wires": []
     },
     {
@@ -2677,8 +2678,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 2020,
+        "x": 910,
+        "y": 2280,
         "wires": [
             [
                 "64a7bc289602f12b",
@@ -2742,8 +2743,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1240,
-        "y": 2020,
+        "x": 1220,
+        "y": 2280,
         "wires": [
             []
         ]
@@ -2760,8 +2761,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 1980,
+        "x": 1200,
+        "y": 2240,
         "wires": [
             [
                 "f7fb7ba36b6421f4"
@@ -2788,8 +2789,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1430,
-        "y": 1980,
+        "x": 1410,
+        "y": 2240,
         "wires": []
     },
     {
@@ -2805,8 +2806,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 440,
-        "y": 2240,
+        "x": 420,
+        "y": 2500,
         "wires": [
             [
                 "b29828150c328363"
@@ -2821,8 +2822,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 690,
-        "y": 2240,
+        "x": 670,
+        "y": 2500,
         "wires": [
             [
                 "b627c2de23b0db09",
@@ -2844,8 +2845,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 2160,
+        "x": 960,
+        "y": 2420,
         "wires": [
             [
                 "510159ab7630998c"
@@ -2908,8 +2909,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1360,
-        "y": 2160,
+        "x": 1340,
+        "y": 2420,
         "wires": [
             []
         ]
@@ -2926,8 +2927,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 2220,
+        "x": 960,
+        "y": 2480,
         "wires": [
             [
                 "c7c340d2a45d8131"
@@ -2990,8 +2991,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1360,
-        "y": 2220,
+        "x": 1340,
+        "y": 2480,
         "wires": [
             []
         ]
@@ -3008,8 +3009,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 2280,
+        "x": 950,
+        "y": 2540,
         "wires": [
             [
                 "9269729f63a79e7e"
@@ -3072,8 +3073,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1350,
-        "y": 2280,
+        "x": 1330,
+        "y": 2540,
         "wires": [
             []
         ]
@@ -3090,8 +3091,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 2340,
+        "x": 950,
+        "y": 2600,
         "wires": [
             [
                 "cce40885e6fbdf90"
@@ -3154,8 +3155,8 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1350,
-        "y": 2340,
+        "x": 1330,
+        "y": 2600,
         "wires": [
             []
         ]
@@ -3173,8 +3174,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 420,
-        "y": 140,
+        "x": 400,
+        "y": 340,
         "wires": [
             [
                 "beee785802a60d0b"
@@ -3189,8 +3190,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 670,
-        "y": 140,
+        "x": 650,
+        "y": 340,
         "wires": [
             [
                 "9fa2a324165836ac"
@@ -3209,8 +3210,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 140,
+        "x": 890,
+        "y": 340,
         "wires": [
             [
                 "58e9eb722dee3791"
@@ -3231,8 +3232,89 @@
         "retentionPolicyV18Flux": "",
         "org": "smartHome",
         "bucket": "homeData",
-        "x": 1160,
-        "y": 140,
+        "x": 1140,
+        "y": 340,
         "wires": []
+    },
+    {
+        "id": "48daae8fdffddfac",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Create email text",
+        "func": "msg.topic = \"MQTT alert - \" + msg.deviceName + \" offline\";\nmsg.payload =\n    \"Device: \" + msg.deviceName +\n    \"\\nTopic: \" + msg.originalTopic +\n    \"\\nStatus: offline\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 180,
+        "wires": [
+            [
+                "c35c02e61219b415"
+            ]
+        ]
+    },
+    {
+        "id": "c35c02e61219b415",
+        "type": "e-mail",
+        "z": "d7fe051a36785b80",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "helmetbromain@gmail.com",
+        "dname": "Gmail alert",
+        "x": 1410,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a9ed86bdb80f7ca",
+        "type": "trigger",
+        "z": "d7fe051a36785b80",
+        "name": "Offline for 1 minute",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "pay",
+        "duration": "1",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 950,
+        "y": 180,
+        "wires": [
+            [
+                "48daae8fdffddfac"
+            ]
+        ]
+    },
+    {
+        "id": "d5ecccbd4edb2976",
+        "type": "function",
+        "z": "d7fe051a36785b80",
+        "name": "Search for offline flag",
+        "func": "let originalTopic = msg.topic;\nlet parts = originalTopic.split(\"/\");\nlet deviceName = parts[1] || \"unknown device\";\n\nmsg.deviceName = deviceName;\nmsg.originalTopic = originalTopic;\n\nif (msg.payload === \"offline\") {\n    return msg;\n}\n\nif (msg.payload === \"online\") {\n    msg.reset = true;\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 180,
+        "wires": [
+            [
+                "7a9ed86bdb80f7ca"
+            ]
+        ]
     }
 ]
