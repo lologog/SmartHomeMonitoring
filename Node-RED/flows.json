@@ -704,8 +704,8 @@
         "y": 280,
         "wires": [
             [
-                "4f2a87df281eb708",
-                "a316cdbe48a8e21c"
+                "a316cdbe48a8e21c",
+                "4f2a87df281eb708"
             ]
         ]
     },
@@ -715,7 +715,7 @@
         "z": "d7fe051a36785b80",
         "group": "11e5bd4226c99bf4",
         "name": "Temperature Chart",
-        "label": "🌡️ Temperature in the last hour",
+        "label": "🌡️ Temperature in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -739,8 +739,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -787,8 +787,8 @@
         "y": 480,
         "wires": [
             [
-                "9b7a2a92ca03ed82",
-                "6726385d8ca0cf64"
+                "6726385d8ca0cf64",
+                "9b7a2a92ca03ed82"
             ]
         ]
     },
@@ -798,7 +798,7 @@
         "z": "d7fe051a36785b80",
         "group": "e5431bae42dfc84d",
         "name": "Humidity Chart",
-        "label": "💧 Humidity in the last hour",
+        "label": "💧 Humidity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -822,8 +822,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -870,8 +870,8 @@
         "y": 380,
         "wires": [
             [
-                "d66fbf52f6588ded",
-                "2fc2092e7270d685"
+                "2fc2092e7270d685",
+                "d66fbf52f6588ded"
             ]
         ]
     },
@@ -881,7 +881,7 @@
         "z": "d7fe051a36785b80",
         "group": "94382d908d5bb9f9",
         "name": "Light intensity Chart",
-        "label": "💡 Light intensity in the last hour",
+        "label": "💡 Light intensity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -905,8 +905,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -953,8 +953,8 @@
         "y": 580,
         "wires": [
             [
-                "8937033d62df2a60",
-                "17ee9fa306fbe9d1"
+                "17ee9fa306fbe9d1",
+                "8937033d62df2a60"
             ]
         ]
     },
@@ -964,7 +964,7 @@
         "z": "d7fe051a36785b80",
         "group": "1f0af8bfc44d8252",
         "name": "Pressure Chart",
-        "label": "🌪️ Pressure in the last hour",
+        "label": "🌪️ Pressure in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -988,8 +988,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -1236,8 +1236,8 @@
         "y": 760,
         "wires": [
             [
-                "3827a41f651a0a78",
-                "7f8d53de2d8cef75"
+                "7f8d53de2d8cef75",
+                "3827a41f651a0a78"
             ]
         ]
     },
@@ -1247,7 +1247,7 @@
         "z": "d7fe051a36785b80",
         "group": "8a10e043106d1a89",
         "name": "Temperature Chart",
-        "label": "🌡️ Temperature in the last hour",
+        "label": "🌡️ Temperature in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -1271,8 +1271,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -1363,8 +1363,8 @@
         "y": 860,
         "wires": [
             [
-                "d419e06de8a3485e",
-                "727073d0aed9bcdc"
+                "727073d0aed9bcdc",
+                "d419e06de8a3485e"
             ]
         ]
     },
@@ -1374,7 +1374,7 @@
         "z": "d7fe051a36785b80",
         "group": "f2c18455e92b8b94",
         "name": "Light intensity Chart",
-        "label": "💡 Light intensity in the last hour",
+        "label": "💡 Light intensity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -1398,8 +1398,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -1490,8 +1490,8 @@
         "y": 960,
         "wires": [
             [
-                "462012cc15740cf5",
-                "37324d9675634268"
+                "37324d9675634268",
+                "462012cc15740cf5"
             ]
         ]
     },
@@ -1501,7 +1501,7 @@
         "z": "d7fe051a36785b80",
         "group": "60dc7547173e366e",
         "name": "Humidity Chart",
-        "label": "💧 Humidity in the last hour",
+        "label": "💧 Humidity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -1525,8 +1525,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -1617,8 +1617,8 @@
         "y": 1060,
         "wires": [
             [
-                "8a7829823cbaa1d8",
-                "cb589d64751f2644"
+                "cb589d64751f2644",
+                "8a7829823cbaa1d8"
             ]
         ]
     },
@@ -1628,7 +1628,7 @@
         "z": "d7fe051a36785b80",
         "group": "b22e2e7ed8760caf",
         "name": "Pressure Chart",
-        "label": "🌪️ Pressure in the last hour",
+        "label": "🌪️ Pressure in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -1652,8 +1652,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -1768,8 +1768,8 @@
         "y": 1240,
         "wires": [
             [
-                "618b83900197ef45",
-                "41aacc6aee6caffb"
+                "41aacc6aee6caffb",
+                "618b83900197ef45"
             ]
         ]
     },
@@ -1779,7 +1779,7 @@
         "z": "d7fe051a36785b80",
         "group": "5ca33feee65e28b1",
         "name": "Temperature Chart",
-        "label": "🌡️ Temperature in the last hour",
+        "label": "🌡️ Temperature in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -1803,8 +1803,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -1895,8 +1895,8 @@
         "y": 1340,
         "wires": [
             [
-                "cc62fd0aa49d5add",
-                "a473521caeeaa18b"
+                "a473521caeeaa18b",
+                "cc62fd0aa49d5add"
             ]
         ]
     },
@@ -1906,7 +1906,7 @@
         "z": "d7fe051a36785b80",
         "group": "a9d54ca7f925a66a",
         "name": "Light intensity Chart",
-        "label": "💡 Light intensity in the last hour",
+        "label": "💡 Light intensity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -1930,8 +1930,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2022,8 +2022,8 @@
         "y": 1440,
         "wires": [
             [
-                "f88a6ad4f0987f46",
-                "950aa4d863b327cb"
+                "950aa4d863b327cb",
+                "f88a6ad4f0987f46"
             ]
         ]
     },
@@ -2033,7 +2033,7 @@
         "z": "d7fe051a36785b80",
         "group": "02d7be0ecd9ab5a3",
         "name": "Humidity Chart",
-        "label": "💧 Humidity in the last hour",
+        "label": "💧 Humidity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -2057,8 +2057,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2149,8 +2149,8 @@
         "y": 1540,
         "wires": [
             [
-                "d85b3da6b686e2c0",
-                "c2879ccb86bf69c2"
+                "c2879ccb86bf69c2",
+                "d85b3da6b686e2c0"
             ]
         ]
     },
@@ -2160,7 +2160,7 @@
         "z": "d7fe051a36785b80",
         "group": "de80d292c7fc6618",
         "name": "Pressure Chart",
-        "label": "🌪️ Pressure in the last hour",
+        "label": "🌪️ Pressure in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -2184,8 +2184,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2300,8 +2300,8 @@
         "y": 1720,
         "wires": [
             [
-                "dc29cb4fd64bca17",
-                "6a159d726eeb8cf3"
+                "6a159d726eeb8cf3",
+                "dc29cb4fd64bca17"
             ]
         ]
     },
@@ -2311,7 +2311,7 @@
         "z": "d7fe051a36785b80",
         "group": "070c3a81c5b02bda",
         "name": "Temperature Chart",
-        "label": "🌡️ Temperature in the last hour",
+        "label": "🌡️ Temperature in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -2335,8 +2335,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2427,8 +2427,8 @@
         "y": 1820,
         "wires": [
             [
-                "0ef9950f4a80de01",
-                "55a94f37d63278a6"
+                "55a94f37d63278a6",
+                "0ef9950f4a80de01"
             ]
         ]
     },
@@ -2438,7 +2438,7 @@
         "z": "d7fe051a36785b80",
         "group": "f6737c989f66207a",
         "name": "Light intensity Chart",
-        "label": "💡 Light intensity in the last hour",
+        "label": "💡 Light intensity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -2462,8 +2462,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2554,8 +2554,8 @@
         "y": 1920,
         "wires": [
             [
-                "234152be42e862a6",
-                "0b7952cf4476179d"
+                "0b7952cf4476179d",
+                "234152be42e862a6"
             ]
         ]
     },
@@ -2565,7 +2565,7 @@
         "z": "d7fe051a36785b80",
         "group": "c1bafeeec4b9c882",
         "name": "Humidity Chart",
-        "label": "💧 Humidity in the last hour",
+        "label": "💧 Humidity in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -2589,8 +2589,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2681,8 +2681,8 @@
         "y": 2020,
         "wires": [
             [
-                "5b1db88a156a4ae6",
-                "64a7bc289602f12b"
+                "64a7bc289602f12b",
+                "5b1db88a156a4ae6"
             ]
         ]
     },
@@ -2692,7 +2692,7 @@
         "z": "d7fe051a36785b80",
         "group": "37a538e9971ff803",
         "name": "Pressure Chart",
-        "label": "Pressure in the last hour",
+        "label": "Pressure in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -2716,8 +2716,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": false,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2858,7 +2858,7 @@
         "z": "d7fe051a36785b80",
         "group": "c3ca659fb6fb1ebe",
         "name": "Temperature from all of the rooms",
-        "label": "🌡️ Temperature in the last hour",
+        "label": "🌡️ Temperature in the last 10 minutes",
         "order": 1,
         "chartType": "line",
         "category": "topic",
@@ -2882,8 +2882,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": true,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -2964,8 +2964,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": true,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -3046,8 +3046,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": true,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
@@ -3128,8 +3128,8 @@
         "pointShape": "line",
         "pointRadius": "1",
         "showLegend": true,
-        "removeOlder": "1",
-        "removeOlderUnit": "3600",
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#0095ff",
