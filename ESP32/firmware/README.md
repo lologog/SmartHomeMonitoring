@@ -15,12 +15,6 @@ It:
 - publishes device status,
 - sends measurements as JSON.
 
-## Prototype
-
-Below is a prototype setup of the ESP32 with connected sensors.
-
-ADD PHOTO LATER
-
 ## Required libraries
 - WiFi
 - PubSubClient
